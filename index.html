@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff6347;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6347;
+            color: #fff;
+            padding: 12px 25px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e55347;
+            transform: scale(1.1);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            float: right;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            font-weight: 500;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0 0 20px;
+            animation: slideDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            animation: slideUp 1s ease;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f4f4f4;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .project-card {
+            display: inline-block;
+            background: #f9f9f9;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #ff6347, #e55347);
+            color: white;
+            text-align: center;
+        }
+
+        .contact input, .contact textarea, .contact button {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact button {
+            background: #fff;
+            color: #ff6347;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact button:hover {
+            background: #f4f4f4;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            background: #333;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Gangadhar Gowtham Goriparthi</h1>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my projects and skills!</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+        <p>Hello! I am a passionate developer skilled in HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNvZGUlMjB8ZW58MHx8fHwxNjM5NjY2NzQ3&ixlib=rb-1.2.1&q=80&w=300" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>A responsive website showcasing modern designs and features.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGRldmVsb3BtZW50fGVufDB8fHx8MTYzOTY2Njc1Mw&ixlib=rb-1.2.1&q=80&w=300" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>A JavaScript application for task management and productivity.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHdlYnNpdGV8ZW58MHx8fHwxNjM5NjY2NzU3&ixlib=rb-1.2.1&q=80&w=300" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>An e-commerce platform with a custom shopping cart solution.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Gangadhar Gowtham Goriparthi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
